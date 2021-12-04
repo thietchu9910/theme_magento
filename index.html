@@ -13,158 +13,131 @@
 </head>
 
 <body>
+
+    <!-- // section Form
+    //----------------------------------------- -->
+
     <section class="header">
         <div class="wrapper">
-            <div class="header__inner">
-                <div class="header__logo">
-                    <a class="header__logo-link" href="#">
+            <ul class="flex">
+                <li>
+                    <a href="#">
                         <img class="header__logo-img" src="./img/logo.png" alt="">
                     </a>
-                </div>
-                <div class="header__middle">
-                    <ul class="header__list">
-                        <li class="header__list-item"><a class="header__list-link" href="#">Features</a></li>
-                        <li class="header__list-item"><a class="header__list-link" href="#">Pricing</a></li>
-                        <li class="header__list-item"><a class="header__list-link" href="#">Contact</a></li>
+                </li>
+                <li class="flex middle">
+                    <ul class="flex">
+                        <li><a class="link-primary" href="#">Features</a></li>
+                        <li><a class="link-primary" href="#">Pricing</a></li>
+                        <li><a class="link-primary" href="#">Contact</a></li>
                     </ul>
-                </div>
-                <div class="header__right">
-                    <ul class="header__list">
-                        <li class="header__list-item"><a class="header__list-link" href="#">Log In</a></li>
-                        <li class="header__list-item"><a class="header__list-link" href="#">Start now</a></li>
+                </li>
+                <li>
+                    <ul class="flex right">
+                        <li><a class="btn-secondary" href="#">Log In</a></li>
+                        <li><a class="btn-primary" href="#">Start now</a></li>
                     </ul>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </section>
 
-    <!-- //mobile menu -->
-    <!-- //mobile menu -->
-    <div class="header-moblie">
-        <div class="menu" id="menu">
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
-            </label>
+    <!-- // section Form -->
+    <!-- //----------------------------------------- -->
 
-            <ul>
-
-                <li>
-                    <input type="checkbox" id="close">
-                    <label for="check" class="checkbtn">
-                        <i class="fas fa-times"></i>
-                    </label>
-                </li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-
-        <div class="logo">
-            <img src="./img/logo.png" alt="">
-        </div>
-
-        <div class="search-item">
-            <ul>
-
-                <li>
-                    <a href="#"><i class="fas fa-shopping-bag"></i></a>
-                </li>
-
-            </ul>
-        </div>
-    </div>
-
-    </div>
-
-    <section class="banner">
+    <section class="banner padding-125">
         <div class="wrapper">
             <div class="banner__inner">
 
-                <h2 class="banner__title">Simplify your online shipping for free this month!</h2>
+                <h2 class="h2">Simplify your online shipping for free this month!</h2>
                 <p class="banner__desc">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit
                     quaerendum. At nam
                     minimum ponderum. Est audiam animal molestiae te.</p>
-                <div class="banner__button">
-                    <ul class="banner__list">
-                        <li class="banner__list-item"><a class="banner__list-link" href="#">Start free trial</a></li>
-                        <li class="banner__list-item"><a class="banner__list-link" href="#">Learn more</a></li>
-                    </ul>
-                </div>
+                <ul class="flex">
+                    <li><a class="btn-primary" href="#">Start free trial</a></li>
+                    <li><a class="btn-secondary" href="#">Learn more</a></li>
+                </ul>
             </div>
         </div>
     </section>
+
+    <!-- 
+    // section shipping
+    //----------------------------------------- -->
+
     <section class="shipping">
         <div class="wrapper">
             <div class="shipping__intro">
-                <h3 class="shipping__intro-title">Grow your business with better Shipping</h3>
-                <p class="shipping__intro-desc">We help the world’s leading organizations follow their shipping</p>
+                <h3 class="h3">Grow your business with better Shipping</h3>
+                <p class="desc">We help the world’s leading organizations follow their shipping</p>
             </div>
-            <div class="shipping__desc">
-                <div class="shipping__desc-box">
-                    <img class="shipping__desc-box-img" src="./img/briefcase.png" alt="">
-                    <h6 class="shipping__desc-box-title">Shipping communication</h6>
-                    <p class="shipping__desc-box-doc">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur
+            <div class="flex">
+                <div>
+                    <img src="./img/briefcase.png" alt="">
+                    <h6 class="h6">Shipping communication</h6>
+                    <p>At eripuit signiferumque sea, vel ad mucius molestie, cu labitur
                         iuvaret vulputate sed.</p>
-                    <a class="shipping__desc-box-link" href="#">Discover</a>
+                    <a class="link-primary" href="#">Discover</a>
                 </div>
-
-                <div class="shipping__desc-box">
-                    <img class="shipping__desc-box-img" src="./img/life buoy.png" alt="">
-                    <h6 class="shipping__desc-box-title">Marketing</h6>
-                    <p class="shipping__desc-box-doc">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur
+                <div>
+                    <img src="./img/briefcase.png" alt="">
+                    <h6 class="h6">Shipping communication</h6>
+                    <p>At eripuit signiferumque sea, vel ad mucius molestie, cu labitur
                         iuvaret vulputate sed.</p>
-                    <a class="shipping__desc-box-link" href="#">Discover</a>
+                    <a class="link-primary " href="#">Discover</a>
                 </div>
-                <div class="shipping__desc-box">
-                    <img class="shipping__desc-box-img" src="./img/Vector.png" alt="">
-                    <h6 class="shipping__desc-box-title">Logistic performance</h6>
-                    <p class="shipping__desc-box-doc"> At eripuit signiferumque sea, vel ad mucius molestie, cu labitur
+                <div>
+                    <img src="./img/briefcase.png" alt="">
+                    <h6 class="h6">Shipping communication</h6>
+                    <p>At eripuit signiferumque sea, vel ad mucius molestie, cu labitur
                         iuvaret vulputate sed.</p>
-                    <a class="shipping__desc-box-link" href="#">Discover</a>
+                    <a class="link-primary " href="#">Discover</a>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- // section Form
+//----------------------------------------- -->
+
     <section class="form">
         <div class="wrapper">
-            <div class="form__box">
-                <div class="form__box-img">
+            <div class="flex padding-100">
+                <div class="form__box-img margin-right-30">
                     <img src="./img/image.jpg" alt="">
                 </div>
                 <div class="form__box-content">
-                    <h3 class="form__box-content-title">Ad eos saepe lucilius, noster postulant philosophia ea usu, qui
+                    <h3 class="h3">Ad eos saepe lucilius, noster postulant philosophia ea usu, qui
                         dicta
                         sadipscing te.</h3>
                     <p class="form__box-content-desc">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad,
                         nam no suscipit quaerendum.
                         At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit mentitum.</p>
                     <form action="#">
-                        <input type="text" placeholder="placeholder.." name="search">
-                        <button type="submit">Primary action</button>
+                        <input class="input-primary" type="text" placeholder="placeholder.." name="search">
+                        <button class="btn-primary" type="submit">Primary action</button>
                     </form>
-                    <p class="form__box-content-click">By clicking “Primary action” you accepting ipsum dolor sit amet,
+                    <p class="click">By clicking “Primary action” you accepting ipsum dolor sit amet,
                         sit ea
                         brute mediocritatem,
                         eu sed aliquam scripserit dissentiunt.</p>
                 </div>
             </div>
-            <div class="form__box">
+            <div class="flex ">
                 <div class="form__box-content">
-                    <h3 class="form__box-content-title">Fostering creativity and innovationeam definiebas reformidans,
+                    <h3 class="h3">Fostering creativity and innovationeam definiebas reformidans,
                         exerci
                         persecuti</h3>
-                    <div class="form__box-content-grid">
-                        <div class="form__box-content-grid-small">
-                            <img class="form__box-content-grid-small-img" src="./img/box.png" alt="">
-                            <p class="form__box-content-grid-small-doc">Et has minim elitr intellegat. Mea aeterno
+                    <div class="flex margin-right-30">
+                        <div class="margin-right-30">
+                            <img src="./img/box.png" alt="">
+                            <p>Et has minim elitr intellegat. Mea aeterno
                                 eleifend antiopam ad, nam no suscipit
                                 quaerendum.</p>
                         </div>
-                        <div class="form__box-content-grid-small">
-                            <img class="form__box-content-grid-small-img" src="./img/truck.png" alt="">
-                            <p class="form__box-content-grid-small-doc">Et has minim elitr intellegat. Mea aeterno
+                        <div>
+                            <img src="./img/truck.png" alt="">
+                            <p>Et has minim elitr intellegat. Mea aeterno
                                 eleifend antiopam ad, nam no suscipit
                                 quaerendum.</p>
                         </div>
@@ -181,24 +154,24 @@
             <div class="grid-content__inner">
                 <div class="grid-content__inner-box">
                     <img class="grid-content__inner-box-img" src="./img/image.png" alt="">
-                    <h6 class="grid-content__inner-box-title">Ad eos saepe lucilius</h6>
+                    <h6 class="h6">Ad eos saepe lucilius</h6>
 
                 </div>
                 <div class="grid-content__inner-box">
                     <img class="grid-content__inner-box-img" src="./img/image2.png" alt="">
-                    <h6 class="grid-content__inner-box-title">Ad eos saepe lucilius</h6>
+                    <h6 class="h6">Ad eos saepe lucilius</h6>
                     <p class="grid-content__inner-doc">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.
                     </p>
                 </div>
                 <div class="grid-content__inner-box">
                     <img class="grid-content__inner-box-img" src="./img/image3.png" alt="">
-                    <h6 class="grid-content__inner-box-title">Ad eos saepe lucilius</h6>
+                    <h6 class="h6">Ad eos saepe lucilius</h6>
                     <p class="grid-content__inner-doc">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.
                     </p>
                 </div>
                 <div class="grid-content__inner-box">
                     <img class="grid-content__inner-box-img" src="./img/image.png" alt="">
-                    <h6 class="grid-content__inner-box-title">Ad eos saepe lucilius</h6>
+                    <h6 class="h6">Ad eos saepe lucilius</h6>
                     <p class="grid-content__inner-doc">At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.
                     </p>
                 </div>

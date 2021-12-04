@@ -1,0 +1,9 @@
+{
+  "name": "theme_magento",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {},
+  "scripts": {
+    "less": "lessc style.less > style.css"
+  }
+}

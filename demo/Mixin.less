@@ -1,0 +1,205 @@
+@import "../Variables/Variables.less";
+// =================== Mixins =============================================
+
+.box-shadow-slip{ 
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 0 5px  5px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+    -o-box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+}
+
+//
+// Inputs
+// -------------------------------------------------
+
+.input(@color, @bg, @border-color){
+    color: @color;
+    padding-left: @input-primary-padding;
+    background: @bg;
+    line-height: @input-line-height;
+    border: 1px solid @border-color;
+    border-radius: 20px;
+}
+
+// Input Primary
+.input-primary{
+    .input(@input-primary-color, @input-primary-background, @input-primary-border-color);
+}
+
+//
+//  Buttons
+//  ---------------------------------------------
+ 
+.button(@color, @bg, @hover-color, @hover-bg) {
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 20px; 
+    text-transform: uppercase;
+    font-weight: @font-weight-semibold;
+    line-height: @btn-line-height;
+    border: 1px solid @color-primary;
+    padding: @btn-padding;
+    background: @bg;
+    color: @color;
+    &:hover{
+        background: @hover-bg;
+        color: @hover-color;
+    }
+}
+
+// Button-primary
+.btn-primary{
+    .button(@btn-primary-color, @btn-primary-background, @btn-primary-hover-color, @btn-primary-hover-background);
+}
+
+// Button-primary
+.btn-primary-reverse{
+    .button(@btn-primary-hover-color, @btn-primary-hover-background, @btn-primary-color, @btn-primary-background);
+}
+
+
+
+// Button-secondary
+.btn-secondary{
+    .button(@btn-secondary-color, @btn-secondary-background, @btn-secondary-hover-color, @btn-secondary-hover-background);
+}
+
+
+// 
+// Grid
+// -------------------------------------------------------------------
+
+.grid(@num-col, @space-row,@space-col){
+    display: grid;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: repeat(@num-col, 1fr);
+    grid-gap: @space-row @space-col;
+}
+
+//
+// Labels
+// -------------------------------------------------------------------
+
+.label(@fw, @bg, @color){
+    font-size: @font-size-small;
+    border-radius: 20px;
+    letter-spacing: 0.05;
+    font-weight: @fw;
+    background: @bg;
+    border: 1px solid @bg;
+    color: @color;
+}
+
+
+// Label primary
+
+.label-primary{
+    .label(@font-weight-bold, @color-primary, @color-white)
+}
+
+// Label primary reverse 
+
+.label-primary-severse{
+    .label(@font-weight-bold, @color-white, @color-primary)
+}
+
+// Label secondary
+
+.label-secondary{
+    .label(@font-weight-semibold, @color-secondary, @color-white)
+}
+
+//
+// Category-slip
+// ---------------------------------------------------------------------
+
+.slip-category{
+    width: 60px;
+    height: 60px;
+    background: @color-white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .box-shadow-slip();
+    &:hover{
+        background: @color-primary;
+        svg path{
+            fill: @color-white;
+        }
+    }
+    &.active{
+        background: @color-primary;
+        svg path{
+            fill: @color-white;
+        }
+    }
+}
+
+//
+// Chat Slip
+// ----------------------------------------------------------
+
+.contact-icon(@url){
+    // margin-bottom: 15px;
+    width: 40px;
+    height: 40px;
+    background: @color-secondary;
+    background-image: @url;
+    background-position: center, center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    .box-shadow-slip();
+}
+
+// Chat Phone 
+// -----------------------------------------------------------------------
+
+.contact-phone{
+    .contact-icon(@phone-chat);
+}
+
+// Chat Mes
+// -----------------------------------------------------------------------
+
+.contact-mes{     
+    .contact-icon(@mes-chat);
+}
+
+//
+// Social slip
+// -------------------------------------------------------------------------
+
+.social-icon(@url){ 
+    width: 35px;
+    height: 35px;
+    background: @color-secondary;
+    background-image: @url;
+    background-position: center, center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+// Facebook
+// ------------------------------------------------------------
+ 
+.facebook-icon{   
+    .social-icon(@social-facebook);
+}
+
+// Youtube
+// ----------------------------------------------------------------
+
+.youtube-icon{
+    .social-icon(@social-youtube);
+}
+
+// Gmail
+// ----------------------------------------------------------------
+
+.gmail-icon{ 
+    .social-icon(@social-gmail);
+}
+
+    

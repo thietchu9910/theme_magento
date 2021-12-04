@@ -1,0 +1,164 @@
+@import "./Variables.less";
+//===========================Mixins==============================
+
+// Inputs
+.input(@color, @bg, @letter-spacing, @fz, @padding, @input-line-height, @border, @border-radius) {
+    color: @color;
+    font-size: @fz;
+    letter-spacing: @letter-spacing;
+    padding: @padding;
+    background: @bg;
+    line-height: @input-line-height;
+    border: @border;
+    border-radius: @border-radius;
+}
+
+// input primary
+.input-primary {
+    .input(@input-primary-color, @input-primary-background, @input-letter-spacing, @input-fz, @input-primary-padding, @input-line-height, @input-border, @input-border-radius);
+}
+
+//
+// Buttons
+//--------------------------------------------------------
+.button(@color, @bg, @hover-color, @hover-bg) {
+    color: @color;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    display: inline-block;
+    font-weight: @font-weight-700;
+    line-height: @btn-line-height;
+    border: 1px solid @color-secondary;
+    padding: @btn-padding;
+    background: @bg;
+
+    &:hover {
+        background: @hover-bg;
+        color: @hover-color;
+    }
+}
+
+//
+//Button-primary
+//-------------------------------------
+
+.btn-primary {
+    .button(@btn-primary-color, @btn-primary-background, @btn-primary-hover-color, @btn-secondary-hover-background)
+}
+
+//
+//Button-primary
+//-------------------------------------
+
+.btn-secondary {
+    .button(@btn-secondary-color, @btn-secondary-background, @btn-secondary-hover-color, @btn-secondary-hover-background)
+}
+
+//
+// Grid
+//------------------------------------------------------------------
+.grid(@num-col, @space-row, @space-col) {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: repeat(@num-col, 1fr);
+    grid-gap: @space-row @space-col;
+}
+
+//
+// Flex
+//----------------------------------------------------------
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+//
+// Headings
+//-------------------------------------------------------------------
+
+.heading(@fz, @fw, @lh, @color) {
+    font-size: @fz;
+    font-weight: @fw;
+    line-height: @lh;
+    color: @color;
+}
+
+//h2
+//-----------------------------------------
+
+.h2 {
+    .heading(@font-size-44px, @font-weight-700, @line-height-56px, @color-black);
+}
+
+//h3
+//--------------------------------
+
+.h3 {
+    .heading(@font-size-32px, @font-weight-700, @line-height-40px, @color-black);
+}
+
+
+//h6
+//------------------------------
+
+.h6 {
+    .heading(@font-size-18px, @font-weight-700, @line-height-24px, @color-black);
+}
+
+//
+// Desc
+//----------------------------------
+
+.desc(@fz, @fw, @color, @lh, @text-align, @margin, @letter-spacing) {
+    font-size: @fz;
+    font-weight: @fw;
+    color: @color;
+    line-height: @lh;
+    text-align: @text-align;
+    margin: @margin;
+    letter-spacing: @letter-spacing;
+}
+
+//
+// padding
+//-----------------------------------
+
+.padding-100{
+    padding: 100px 0;
+}
+
+.padding-125{
+    padding: 125px 0;
+}
+
+//
+// margin
+//-----------------------------------
+
+.margin-right-30{
+    margin-right: 30px;
+}
+
+//
+// links
+//-----------------------------------
+
+.link(@fz, @fw, @lh, @letter-spacing, @color) {
+    font-size: @fz;
+    font-weight: @fw;
+    line-height: @lh;
+    letter-spacing: @letter-spacing;
+    color: @color;
+}
+
+.link-primary {
+    .link(@font-size-14px, @font-weight-600, @line-height-18px, @letter-spacing02, @color-black);
+}
+
+.link-primary {
+    .link(@font-size-14px, @font-weight-700, @line-height-18px, @letter-spacing03, @color-secondary);
+}

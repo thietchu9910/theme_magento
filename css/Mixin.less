@@ -1,5 +1,4 @@
-@import "./Variables.less";
-//===========================Mixins==============================
+
 
 // Inputs
 .input(@color, @bg, @letter-spacing, @fz, @padding, @input-line-height, @border, @border-radius) {
@@ -15,7 +14,7 @@
 
 // input primary
 .input-primary {
-    .input(@input-primary-color, @input-primary-background, @input-letter-spacing, @input-fz, @input-primary-padding, @input-line-height, @input-border, @input-border-radius);
+    .input(@input-primary-color, @input-primary-background, @input-primary-letter-spacing, @input-primary-fz, @input-primary-padding, @input-primary-line-height, @input-primary-border, @input-primary-border-radius);
 }
 
 //
@@ -26,7 +25,7 @@
     font-size: 14px;
     letter-spacing: 0.3px;
     display: inline-block;
-    font-weight: @font-weight-700;
+    font-weight: @font-weight__bold;
     line-height: @btn-line-height;
     border: 1px solid @color-secondary;
     padding: @btn-padding;
@@ -43,11 +42,11 @@
 //-------------------------------------
 
 .btn-primary {
-    .button(@btn-primary-color, @btn-primary-background, @btn-primary-hover-color, @btn-secondary-hover-background)
+    .button(@btn-primary-color, @btn-primary-background, @btn-primary-hover-color, @btn-primary-hover-background)
 }
 
 //
-//Button-primary
+//Button-secondary
 //-------------------------------------
 
 .btn-secondary {
@@ -69,7 +68,7 @@
 // Flex
 //----------------------------------------------------------
 
-.flex{
+.flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -91,14 +90,14 @@
 //-----------------------------------------
 
 .h2 {
-    .heading(@font-size-44px, @font-weight-700, @line-height-56px, @color-black);
+    .heading(@font-size__h2, @font-weight__bold, @line-height__h2, @text-color__heading);
 }
 
 //h3
 //--------------------------------
 
 .h3 {
-    .heading(@font-size-32px, @font-weight-700, @line-height-40px, @color-black);
+    .heading(@font-size__h3, @font-weight__bold, @line-height__h3, @text-color__heading);
 }
 
 
@@ -106,41 +105,27 @@
 //------------------------------
 
 .h6 {
-    .heading(@font-size-18px, @font-weight-700, @line-height-24px, @color-black);
+    .heading(@font-size__h6, @font-weight__bold, @line-height__h6, @text-color__heading);
 }
 
 //
 // Desc
 //----------------------------------
 
-.desc(@fz, @fw, @color, @lh, @text-align, @margin, @letter-spacing) {
+.desc(@fz, @lh, @letter-spacing) {
     font-size: @fz;
-    font-weight: @fw;
-    color: @color;
+    font-weight: @font-weight-primary;
+    color: @text-color__base;
     line-height: @lh;
-    text-align: @text-align;
-    margin: @margin;
     letter-spacing: @letter-spacing;
 }
 
-//
-// padding
-//-----------------------------------
-
-.padding-100{
-    padding: 100px 0;
+.desc-primary {
+    .desc(@font-size-primary, @line-height-primary, @letter-spacing-primary);
 }
 
-.padding-125{
-    padding: 125px 0;
-}
-
-//
-// margin
-//-----------------------------------
-
-.margin-right-30{
-    margin-right: 30px;
+.desc-secondary {
+    .desc(@font-size-secondary, @line-height-secondary, @letter-spacing-secondary);
 }
 
 //
@@ -153,12 +138,24 @@
     line-height: @lh;
     letter-spacing: @letter-spacing;
     color: @color;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.link-secondary {
+    .link(@font-size-secondary, @font-weight-secondary, @line-height__medium, @letter-spacing__m, @color-black);
 }
 
 .link-primary {
-    .link(@font-size-14px, @font-weight-600, @line-height-18px, @letter-spacing02, @color-black);
+    .link(@font-size__l, @font-weight__bold, @line-height__medium, @letter-spacing__l, @color-primary);
 }
 
-.link-primary {
-    .link(@font-size-14px, @font-weight-700, @line-height-18px, @letter-spacing03, @color-secondary);
+//
+// Container body
+//----------------------------------------------
+.container {
+    max-width: 1110px;
+    margin: auto;
 }
